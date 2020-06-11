@@ -23,7 +23,8 @@
             var text1 = "Screen resolution: " + screen.width + "x" + screen.height;
             var text2 = "Device pixel ratio: " + window.devicePixelRatio;
             var text3 = "Pixels: " + Math.round(window.screen.width * window.devicePixelRatio) + "x" + Math.round(window.screen.height * window.devicePixelRatio);
-            return text1 + "<br />" + text2 + "<br />" + text3;
+            var text4 = "Inner: " + window.innerWidth + "x" + window.innerHeight;
+            return text1 + "<br />" + text2 + "<br />" + text3 + "<br />" + text4;
         }
         getResolution();
 
