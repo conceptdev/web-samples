@@ -145,6 +145,34 @@
     .content {
       flex-direction: column-reverse;
     }
+
+    .blue {
+        height: 100px;
+        width: calc(env(fold-width)/2);
+        position: absolute;
+        top: env(fold-bottom);
+        background-color: blue;
+        text-align: center;
+        color: white;
+    }
+    .yellow {
+        height: 100px;
+        width: env(fold-right);
+        position: absolute;
+        left: 0;
+        bottom: env(fold-top);
+        background-color: yellow;
+        text-align: center;
+    }
+    .pink {
+        height: 100px;
+        width: calc(env(fold-width)/2);
+        position: absolute;
+        right: calc(env(fold-width) - 100vw);
+        bottom: 0;
+        background-color: pink;
+        text-align: center;
+    }
   }
   @media (screen-spanning: none) {
 
