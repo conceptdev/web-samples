@@ -207,7 +207,7 @@
         width: env(fold-width);
         position: absolute;
         left: 0;
-        top: 300px;
+        top: 150px;
     }
     .height {
         height: env(fold-height);
