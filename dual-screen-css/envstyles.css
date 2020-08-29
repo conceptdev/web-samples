@@ -192,7 +192,7 @@
       height: 100px;
       width: 100px;
       position: absolute;
-      left: 0;
+      left: calc(env(fold-width) / 2 - 50px);
       top: calc(env(fold-top) - 100px);
     }
     .left {
@@ -220,7 +220,7 @@
       height: 50px;
       width: 100px;
       position: absolute;
-      left: calc(env(fold-width) - 100px);
+      left: calc(env(fold-width) / 2 - 50px);
       top: env(fold-bottom);
       /*bottom: env(fold-bottom);*/
     }
@@ -235,7 +235,7 @@
       height: 50px;
       width: 100px;
       position: absolute;
-      left: calc(env(fold-width) - 100px);
+      left: calc(env(fold-width) / 2 - 50px);
       top: calc(env(fold-top) + env(fold-height) + 50px);
     }
     .right-calc {
