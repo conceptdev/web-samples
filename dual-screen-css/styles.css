@@ -25,7 +25,7 @@
   .main-container {
     width: 100vw;
     height: 100vh;
-    background-color: #bf0033;
+    background-color: lightcoral;
     text-align: center;
   }
   .text {
@@ -36,7 +36,7 @@
   .second-container {
     height: 0vh;
     width: 0vw;
-    background-color: #126b00;
+    background-color: greenyellow;
     text-align: center;
   }
   .stripes {
