@@ -20,7 +20,7 @@
 <script>
 
         function printWindowSegments() {
-            const screens = window.getWindowSegments();
+            const screens = window.visualViewport.segments;
             console.log("Window segments:");
             console.table(screens);
             console.log("Window size:", window.innerWidth, window.innerHeight);
