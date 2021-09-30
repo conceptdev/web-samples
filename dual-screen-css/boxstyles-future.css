@@ -42,30 +42,28 @@
   .blue {
       height: 100px;
       width: 100px;
-      background-color: blue;
+      background-color: rgb(134, 183, 255);
       text-align: center;
-      color: white;
   }
 
   .yellow {
       height: 100px;
       width: 100px;
-      background-color: yellow;
+      background-color: rgb(255, 255, 164);
       text-align: center;
   }
 
   .pink {
       height: 100px;
       width: 100px;
-      background-color: pink;
+      background-color: rgb(255, 192, 231);
       text-align: center;
   }
 
   .green {
       height: 100px;
       width: 100px;
-      background-color: green;
-      color: white;
+      background-color: rgb(156, 241, 156);
       text-align: center;
   }
 
@@ -87,7 +85,6 @@
         position: absolute;
         left: calc(env(fold-left) - 100px);
         top: 0;
-        background-color: blue;
         text-align: center;
     }
 
@@ -97,7 +94,6 @@
         position: absolute;
         left: calc(env(fold-left) + env(fold-width)); /*fold-right*/
         top: 0;
-        background-color: yellow;
         text-align: center;
     }
 
@@ -107,7 +103,6 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        background-color: pink;
         text-align: center;
     }
 
@@ -117,7 +112,6 @@
         position: absolute;
         left: calc(env(fold-left) + env(fold-width)); /*fold-width*/
         bottom: 0;
-        background-color: green;
         text-align: center;
     }
   }
@@ -159,7 +153,7 @@
         text-align: center;
     }
   }
-  @media (vertical-viewport-segments:1) and (vertical-viewport-segments:0) {
+  @media (vertical-viewport-segments:1) and (vertical-viewport-segments:1) {
 
     .fold {
       height: 0;
