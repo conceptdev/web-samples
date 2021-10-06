@@ -132,16 +132,15 @@
         width: calc(env(viewport-segment-width 0 0)/2);
         position: absolute;
         top: env(viewport-segment-top 0 1);
-        background-color: ping;
         text-align: center;
         
     }
     .yellow {
         height: 100px;
-        width: env(fold-right);
+        width: env(viewport-segment-width 0 0);
         position: absolute;
         left: 0;
-        bottom: env(fold-top);
+        bottom: env(viewport-segment-bottom 0 0);
         text-align: center;
     }
     .green {
