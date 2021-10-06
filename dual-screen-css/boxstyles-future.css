@@ -152,7 +152,7 @@
         text-align: center;
     }
   }
-  @media (vertical-viewport-segments:1) and (vertical-viewport-segments:1) {
+  @media (horizontal-viewport-segments:1) and (vertical-viewport-segments:1) {
 
     .fold {
       height: 0;
