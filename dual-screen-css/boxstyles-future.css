@@ -117,8 +117,8 @@
   }
   @media (vertical-viewport-segments:2) {
     .fold {
-      height: env(viewport-segment-height 0 0);
-      width: calc(env(viewport-segment-top 0 1) - env(viewport-segment-bottom 0 0));
+      height: calc(env(viewport-segment-top 0 1) - env(viewport-segment-bottom 0 0));
+      width: env(viewport-segment-width 0 0);
       left: 0;
       top: env(viewport-segment-bottom 0 0);
       position: absolute;
@@ -129,9 +129,9 @@
 
     .pink {
         height: 100px;
-        width: calc(env(fold-width)/2);
+        width: calc(env(viewport-segment-width 0 0)/2);
         position: absolute;
-        top: env(fold-bottom);
+        top: env(viewport-segment-top 1 0);
         background-color: ping;
         text-align: center;
         
@@ -146,9 +146,9 @@
     }
     .green {
         height: 100px;
-        width: calc(env(fold-width)/2);
+        width: calc(env(viewport-segment-width 0 0)/2);
         position: absolute;
-        right: calc(env(fold-width) - 100vw);
+        right: calc(env(viewport-segment-width 0 0) - 100vw);
         bottom: 0;
         text-align: center;
     }
