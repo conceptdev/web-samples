@@ -110,7 +110,7 @@
         height: 100px;
         width: 100px;
         position: absolute;
-        left: env(viewport-segment-left 0 0); /*fold-width*/
+        left: env(viewport-segment-left 1 0); /*fold-width*/
         bottom: 0;
         text-align: center;
     }
