@@ -69,9 +69,9 @@
 
   @media (horizontal-viewport-segments:2) {
     .fold {
-      height: env(fold-height);
-      width: env(fold-width);
-      left: env(fold-left);
+      height: env(viewport-segment-height 0 0);
+      width: calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0));
+      left: env(viewport-segment-right 0 0);
       top: 0;
       position: absolute;
     }
@@ -83,7 +83,7 @@
         height: 100px;
         width: 100px;
         position: absolute;
-        left: calc(env(fold-left) - 100px);
+        left: calc(env(viewport-segment-right 0 0) - 100px);
         top: 0;
         text-align: center;
     }
@@ -99,7 +99,7 @@
 
     .pink {
         height: 100px;
-        width: env(fold-left);
+        width: env(viewport-segment-right 0 0);
         position: absolute;
         left: 0;
         bottom: 0;
@@ -117,10 +117,10 @@
   }
   @media (vertical-viewport-segments:2) {
     .fold {
-      height: env(fold-height);
-      width: env(fold-width);
+      height: env(viewport-segment-height 0 0);
+      width: calc(env(viewport-segment-top 0 1) - env(viewport-segment-bottom 0 0));
       left: 0;
-      top: env(fold-top);
+      top: env(viewport-segment-bottom 0 0);
       position: absolute;
     }
     .content {
