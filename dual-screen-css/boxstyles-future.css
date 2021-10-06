@@ -71,7 +71,7 @@
     .fold {
       height: env(viewport-segment-height 0 0);
       width: calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0));
-      left: env(viewport-segment-right 0 0);
+      left: calc (env(viewport-segment-right 0 0) - 100);
       top: 0;
       position: absolute;
     }
@@ -90,9 +90,9 @@
 
     .yellow {
         height: 100px;
-        width: calc(100vw - env(fold-left) - env(fold-width));  /*fold-right*/
+        width: calc(100vw - env(viewport-segment-left 0 1));  /*fold-right*/
         position: absolute;
-        left: calc(env(fold-left) + env(fold-width)); /*fold-right*/
+        left: env(viewport-segment-left 0 1); /*fold-right*/
         top: 0;
         text-align: center;
     }
@@ -110,7 +110,7 @@
         height: 100px;
         width: 100px;
         position: absolute;
-        left: calc(env(fold-left) + env(fold-width)); /*fold-width*/
+        left: env(viewport-segment-left 0 0); /*fold-width*/
         bottom: 0;
         text-align: center;
     }
