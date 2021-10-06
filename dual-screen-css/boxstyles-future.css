@@ -127,6 +127,11 @@
       flex-direction: column-reverse;
     }
 
+    .blue {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
     .pink {
         height: 100px;
         width: calc(env(viewport-segment-width 0 0)/2);
