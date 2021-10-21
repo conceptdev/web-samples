@@ -13,7 +13,7 @@
 @media (device-posture: continuous) {
     .blue {
         height: 100px;
-        width: 100px;
+        width: 200px;
         position: absolute;
         left: calc(100vw - 100px);
         top: 0;
@@ -24,9 +24,9 @@
 @media (device-posture: folded) {
     .blue {
         height: 100px;
-        width: 100px;
+        width: 50px;
         position: absolute;
-        left: calc(100vw - 100px);
+        left: calc(100vw - 50px);
         top: 0;
         background-color: rgb(255, 0, 242);
         text-align: center;
@@ -58,5 +58,6 @@
         printWindowSegments();
 
 </script>
+<!-- https://w3c.github.io/device-posture/ -->
 </body>
 </html>
