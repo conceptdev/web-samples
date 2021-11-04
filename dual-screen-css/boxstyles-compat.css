@@ -173,7 +173,7 @@
     }
   }
   /* Original syntax */
-  @media (spanning: single-fold-vertical) {
+  @media (screen-spanning: single-fold-vertical) {
     .fold {
       height: env(fold-height);
       width: env(fold-width);
@@ -224,7 +224,7 @@
         text-align: center;
     }
   }
-  @media (spanning: single-fold-horizontal) {
+  @media (screen-spanning: single-fold-horizontal) {
     .fold {
       height: env(fold-height);
       width: env(fold-width);
@@ -235,8 +235,34 @@
     .content {
       flex-direction: column-reverse;
     }
+
+    .pink {
+        height: 100px;
+        width: calc(env(fold-width)/2);
+        position: absolute;
+        top: env(fold-bottom);
+        background-color: ping;
+        text-align: center;
+        
+    }
+    .yellow {
+        height: 100px;
+        width: env(fold-right);
+        position: absolute;
+        left: 0;
+        bottom: env(fold-top);
+        text-align: center;
+    }
+    .green {
+        height: 100px;
+        width: calc(env(fold-width)/2);
+        position: absolute;
+        right: calc(env(fold-width) - 100vw);
+        bottom: 0;
+        text-align: center;
+    }
   }
-  @media (spanning: none) {
+  @media (screen-spanning: none) {
 
     .fold {
       height: 0;
