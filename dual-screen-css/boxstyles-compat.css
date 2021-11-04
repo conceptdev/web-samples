@@ -66,8 +66,8 @@
       background-color: rgb(156, 241, 156);
       text-align: center;
   }
-
-  @media (horizontal-viewport-segments:2), (spanning: single-fold-vertical) {
+/* Future syntax */
+  @media (horizontal-viewport-segments:2) {
     .fold {
       height: env(viewport-segment-height 0 0);
       width: calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0));
@@ -115,7 +115,7 @@
         text-align: center;
     }
   }
-  @media (vertical-viewport-segments:2),(spanning: single-fold-horizontal) {
+  @media (vertical-viewport-segments:2) {
     .fold {
       height: calc(env(viewport-segment-top 0 1) - env(viewport-segment-bottom 0 0));
       width: env(viewport-segment-width 0 0);
@@ -170,6 +170,70 @@
       height: 0;
       width: 0;
       display: none;
+    }
+  }
+  /* Original syntax */
+  @media (spanning: single-fold-vertical) {
+    .fold {
+      height: env(fold-height);
+      width: env(fold-width);
+      left: env(fold-left);
+      top: 0;
+      position: absolute;
+    }
+    .content {
+      flex-direction: row;
+    }
+
+    .blue {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: calc(env(fold-left) - 100px);
+        top: 0;
+        text-align: center;
+    }
+
+    .yellow {
+        height: 100px;
+        width: calc(100vw - env(fold-left) - env(fold-width));
+        position: absolute;
+        left: calc(env(fold-left) + env(fold-width));
+        top: 0;
+        background-color: yellow;
+        text-align: center;
+    }
+
+    .pink {
+        height: 100px;
+        width: env(fold-left);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: pink;
+        text-align: center;
+    }
+
+    .green {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: calc(env(fold-left) + env(fold-width));
+        bottom: 0;
+        background-color: green;
+        text-align: center;
+    }
+  }
+  @media (spanning: single-fold-horizontal) {
+    .fold {
+      height: env(fold-height);
+      width: env(fold-width);
+      left: 0;
+      top: env(fold-top);
+      position: absolute;
+    }
+    .content {
+      flex-direction: column-reverse;
     }
   }
   @media (spanning: none) {

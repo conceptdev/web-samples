@@ -23,11 +23,11 @@
 
         function printWindowSegments() {
             if (window.visualViewport)
-            {
+            {   // future syntax
                 const screens = window.visualViewport.segments;
                 console.log("window.visualViewport.segments:");
                 console.table(screens);
-            } else {
+            } else { // original syntax
                 const screens = window.getWindowSegments();
                 console.log("window.getWindowSegments:");
                 console.table(screens);
