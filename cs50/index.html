@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Surface Duo dual-screen web</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+    html {
+       font-family: "Lucida Sans", sans-serif;
+    }
+    [class*="col-"] {
+       float: left;
+       width: 100%;
+    }
+   
+    @media (horizontal-viewport-segments:2) {
+        .col-1 {
+            width: env(viewport-segment-right 0 0);
+        }
+        .col-2 {
+            left: env(viewport-segment-left 1 0);
+            width: calc(env(viewport-segment-right 1 0) - env(viewport-segment-left 1 0));
+            top: 30px;
+            position: absolute;
+            margin: 5px;
+        }
+    }
+    @media (screen-spanning: single-fold-vertical) {
+        .col-1 {
+            width: env(fold-left);
+        }
+        .col-2 {
+            left: calc(env(fold-left) + env(fold-width));
+            width: env(fold-left);
+            top: 30px;
+            position: absolute;
+            margin: 5px;
+        }
+    }
+
+    @media only screen and (min-width: 1115px) and (screen-spanning: none) {
+        .col-1 {width: 40%;}
+        .col-2 {width: 60%;}
+    }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="col-1">
+        <h1>CS50 demos</h1>
+        
+        <a href="boxes-compat.html">Boxes</a>
+
+
+        <h2>Web samples</h2>
+        <a href="https://webboard.app">Webboard whiteboard</a> (<a href="https://medium.com/pwabuilder/building-a-drawing-pwa-with-pwabuilder-3f4cccdfee9e">blog</a>)
+        <br/>
+        <a href="https://thankful-tree-07da4921e.azurestaticapps.net/">SimpleEdit photo editor</a>
+        <br />
+        <a href="https://foldable-devices.github.io/demos/photo-gallery/build/">Photo gallery</a>
+        <br/>
+        <a href="https://foldable-devices.github.io/demos/battleship/build/">Battleship game</a>
+        <br/>
+        <a href="https://foldable-devices.github.io/demos/foldnews/build/">FoldNews reader</a>
+        <br/>
+        <a href="https://foldable-devices.github.io/demos/starfold/build/">Starfold game</a>
+    </div>
+    <div class="col-2">
+        <h2>Dual screen documentation</h2>
+        <a href="https://docs.microsoft.com/dual-screen/web/css-media-spanning/">Original syntax</a>
+        <br />
+        <h3>New syntax</h3>
+        <h4>Media</h4>
+        <code>@media (horizontal-viewport-segments:2) { }</code>
+        <br/>
+        <code>@media (vertical-viewport-segments:2) { }</code>
+        <br />
+        <h4>env() variables</h4>
+        <code>env(viewport-segment-width 0 0)</code>
+        <br/>
+        <code>env(viewport-segment-bottom 0 0)</code>
+        <br />
+        <h4>JavaScript</h4>
+        <code>window.visualViewport.segments</code>
+    </div>
+</div>
