@@ -145,7 +145,7 @@
         width: env(viewport-segment-width 0 0);
         position: absolute;
         left: 0;
-        bottom: env(viewport-segment-bottom 0 0);
+        bottom: calc(env(viewport-segment-height 0 1) + env(viewport-segment-top 0 1) - env(viewport-segment-bottom 0 0));
         text-align: center;
     }
     .green {
