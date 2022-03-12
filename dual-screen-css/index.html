@@ -5,34 +5,35 @@
     <title>dual-screen-css-js</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        div, p {
+            font-family: "Arial",sans-serif;
+        }
+    </style>
 </head>
 <body>
 <div class="content">
-    <h2>Choose a dual-screen demo</h2>
-    <a href="red-green.html">Red/green (original syntax)</a>
+    <h1>Choose a dual-screen demo</h1>
+    <a href="red-green.html">Red/green</a>
     <br/>
-    <a href="boxes.html">Color boxes</a>  (<a href="boxes-legacy.html">original syntax</a>)
-    <br />
-    <a href="env.html">env() vars  (original syntax)</a>
+    <a href="boxes.html">Color boxes</a>
     
     <br/>
-    <br/>
-    <a href="boxes-future.html">Future boxes (new syntax)</a>
-    <br/>
-    <br/>
-    <a href="boxes-compat.html">Compatibility boxes</a> - both original and new syntax
-    <br />
     <br />
     <a href="posture.html">Posture</a> (testing proposed syntax)
     <br />
 
-    <h3>Documentation</h3>
-    <a href="https://docs.microsoft.com/dual-screen/web/css-media-spanning/">Original syntax</a>
+    <h2>Documentation</h2>
+    <a href="https://docs.microsoft.com/dual-screen/web/css-media-spanning/">docs.microsoft.com/dual-screen/web</a>
     <br />
-    <h4>New syntax</h4>
-    Media: <code>@media (horizontal-viewport-segments:2) { } @media (vertical-viewport-segments:2) { }</code>
+    <h2>Syntax summary</h2>
+    <h3>Media query</h3>
+    <code>@media (horizontal-viewport-segments:2) { } 
+    <br/>@media (vertical-viewport-segments:2) { }</code>
     <br />
-    env: <code>env(viewport-segment-width 0 0) env(viewport-segment-bottom 0 0)</code>
+    <h3>Environment variables</h3>
+    <code>env(viewport-segment-width 0 0)<br/>env(viewport-segment-width 0 1)</code>
     <br />
-    JavaScript: <code>window.visualViewport.segments</code>
+    <h3>JavaScript</h3>
+    <code>window.visualViewport.segments</code>
 </div>

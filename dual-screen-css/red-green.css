@@ -55,37 +55,37 @@
     height: 0;
     width: 0;
   }
-  @media (screen-spanning: single-fold-vertical) {
+  @media (horizontal-viewport-segments:2) {
     .main-container {
-      width: env(fold-left);
+      width: env(viewport-segment-width 0 0);
       height: 100vh;
     }
     .fold {
-      height: env(fold-height);
-      width: env(fold-width);
+      height: env(viewport-segment-height 0 0);
+      width: calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0));
     }
     .content {
       flex-direction: row;
     }
     .second-container {
       height: 100vh;
-      width: calc(100vw - env(fold-left) - env(fold-width));
+      width: env(viewport-segment-width 1 0);
     }
   }
-  @media (screen-spanning: single-fold-horizontal) {
+  @media (vertical-viewport-segments:2) {
     .main-container {
       width: 100vw;
-      height: calc(100vh - env(fold-top) - env(fold-height));
+      height: env(viewport-segment-height 0 0);
     }
     .fold {
-      height: env(fold-height);
-      width: env(fold-width);
+      height: calc(env(viewport-segment-top 0 1) - env(viewport-segment-bottom 0 0));
+      width: env(viewport-segment-width 0 0);
     }
     .content {
       flex-direction: column-reverse;
     }
     .second-container {
-      height: env(fold-top);
+      height: env(viewport-segment-height 0 1);
       width: 100vw;
     }
   }
