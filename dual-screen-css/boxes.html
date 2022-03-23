@@ -24,18 +24,18 @@
 
 <script>
 
-        function printWindowSegments() {
-            const screens = window.getWindowSegments();
-            console.log("Window segments:");
-            console.table(screens);
-            console.log("Window size:", window.innerWidth, window.innerHeight);
-        }
+function printWindowSegments() {
+    const screens = window.visualViewport.segments;
+    console.log("Window viewport segments:");
+    console.table(screens);
+    console.log("Window size:", window.innerWidth, window.innerHeight);
+}
 
-        window.addEventListener("resize", () => {
-            console.log("resized");
-            printWindowSegments();
-        });
-        printWindowSegments();
+window.addEventListener("resize", () => {
+    console.log("resized");
+    printWindowSegments();
+});
+printWindowSegments();
 
 </script>
 </body>
